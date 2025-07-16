@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Route – IntelliWay</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap">
+  </script>
+</head>
+<body>
+  <h1>🚦 Smart Route Recommendation</h1>
+
+  <form method="POST">
+    <input name="start" placeholder="Start (e.g., Connaught Place)">
+    <input name="end" placeholder="End (e.g., India Gate)">
+    <button type="submit">Get Route</button>
+  </form>
+
+  <div id="map" style="height: 500px; width: 100%; margin-top: 20px;"></div>
+
+ <script>
+  function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 14,
+      center: { lat: 28.6220, lng: 77.2200 }
+    });
+
+    {% if coords %}
+      const coords = {{ coords | tojson | safe }};
+      const path = coords.map(coord => ({ lat: coord[1], lng: coord[0] }));
+      const routeLine = new google.maps.Polyline({
+        path: path,
+        strokeColor: "#00b894",
+        strokeOpacity: 1.0,
+        strokeWeight: 4
+      });
+      routeLine.setMap(map);
+    {% endif %}
+  }
+</script>
+
+</body>
+</html>

@@ -69,6 +69,12 @@ body {
   color: white;
   padding: 4rem 0;
   text-align: center;
+  width: 1600px;
+  height: 400px;
+  background-image: url('assets/reallogo.jpeg');
+  background-repeat: no-repeat;          
+  background-size: cover;                
+  background-position: center; 
 }
 
 .hero-content h1 {

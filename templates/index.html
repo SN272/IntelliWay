@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IntelliWay</title>
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<style> body::before { content: "CSS LOADED"; color: green; position: fixed; top: 0; left: 0; } </style>
+
+  
+
+
+
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo">
+      
+        
+
+      <div class="logo">
+      <img src="assets/logo3.png" alt="IntelliWay Logo" />
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+
+
+          <li><a href="#">Find Your Route</a></li>
+          <li><a href="#">Weather</a></li>
+          <li><a href="#">Updates</a></li>
+        
+          <li><a href="#" class="btn">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    
+  </section>
+ 
+  
+  
+    <!-- 🧭 IntelliWay Interactive Intro Section -->
+
+<section class="intro-section" style="padding: 60px 20px; background: linear-gradient(120deg, #e4f9f5 0%, #ffffff 100%); text-align: center; position: relative; overflow: hidden;">
+  <h2 style="font-size: 2.5em; color: #107c41; margin-bottom: 20px;">🧭 Ready to Rethink How India Moves?</h2>
+  <p style="font-size: 1.1em; max-width: 700px; margin: 0 auto 30px;">
+    Imagine an assistant that doesn't just show you a route—but <strong>thinks</strong>, <strong>adapts</strong>, and <strong>protects</strong> while you move.
+  </p>
+  <p style="font-size: 1.1em; max-width: 700px; margin: 0 auto 40px;">
+    <strong>IntelliWay</strong> is your AI-powered, eco-smart mobility guide for sustainable, inclusive, and real-time travel — from metro stations to remote towns.
+  </p>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1000px; margin: 0 auto;">
+    
+    <div style="background: white; border-radius: 20px; padding: 30px; width: 230px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+      <div style="font-size: 2.5em;">📡</div>
+      <h4>Real-Time Intelligence</h4>
+      <p>Weather, traffic, and disaster alerts built into every suggestion.</p>
+    </div>
+    <div style="background: white; border-radius: 20px; padding: 30px; width: 230px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+      <div style="font-size: 2.5em;">🎙️</div>
+      <h4>Voice-Driven Access</h4>
+      <p>Speak your route in Hindi or your language. We’ll guide you there.</p>
+    </div>
+    <div style="background: white; border-radius: 20px; padding: 30px; width: 230px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+      <div style="font-size: 2.5em;">📶</div>
+      <h4>Offline Support</h4>
+      <p>Access saved routes and key travel info even without a signal.</p>
+    </div>
+    <div style="background: white; border-radius: 20px; padding: 30px; width: 230px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+      <div style="font-size: 2.5em;">🧠</div>
+      <h4> ML-Powered Eco Routing</h4>
+      <p>Let machine learning chart the cleanest, quickest, and smartest path—one footprint at a time</p>
+    </div>
+    
+  <div style="background: white; border-radius: 20px; padding: 30px; width: 230px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+      <div style="font-size: 2.5em;">🚇</div>
+      <h4> Sustainable Public Transit</h4>
+      <p>Maximizing metros, buses, and e-bikes to make every ride cleaner, cheaper, and community-first.</p>
+    </div>
+    <div style="background: white; border-radius: 20px; padding: 30px; width: 230px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+      <div style="font-size: 2.5em;">🧭</div>
+      <h4> AI-Powered Navigation</h4>
+      <p>Navigate with intelligence—adapting to traffic, time, and terrain in real time.</p>
+    </div>
+    <div style="background: white; border-radius: 20px; padding: 30px; width: 230px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+      <div style="font-size: 2.5em;">⚠️</div>
+      <h4>⚠️ Real-Time Alerts</h4>
+      <p>Stay ahead of chaos with instant updates on weather, disasters, and disruptions.</p>
+    </div>
+    <div style="background: white; border-radius: 20px; padding: 30px; width: 230px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+      <div style="font-size: 2.5em;">🧬</div>
+      <h4>Personalization</h4>
+      <p>Your routes, your rules—tailored by AI to your habits, preferences, and safety needs.</p>
+    </div>
+    <div style="background: white; border-radius: 20px; padding: 30px; width: 230px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease;">
+      <div style="font-size: 2.5em;">♿</div>
+      <h4>Inclusive Access</h4>
+      <p>Built for Bharat—voice, visuals, and wheelchair-ready design for every ability and literacy level.</p>
+    </div>
+  </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 IntelliWay Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
