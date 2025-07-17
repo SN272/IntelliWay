@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IntelliWay</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='assets/logo3.png') }}" alt="IntelliWay Logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('route1') }}">Find Your Route</a></li>
+          <li><a href="#">Weather</a></li>
+          <li><a href="#">Updates</a></li>
+          <li><a href="#" class="btn">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero"><br></section>
+  <section class="mission-banner2" data-aos="fade-up"></section>
+
+  <!-- Smart Sustainable Statement -->
+  <section class="mission-banner" data-aos="zoom-in">
+    <h1>Smart. Sustainable. Inclusive. Indian.</h1>
+  </section>
+
+  <!-- Extended Intro Section -->
+  <section class="intro" data-aos="fade-left">
+    <div class="container">
+      <h2>Rethinking How India Moves 🌍</h2>
+      <p>
+        What if your travel app wasn’t just a map <br>but a smart assistant that thinks, learns, and adapts to help you move greener, faster, and safer?
+      </p>
+    </div>
+  </section>
+
+  <!-- Tagline Section -->
+  <section class="tagline-section" data-aos="fade-right">
+    <h1 class="tagline-title">INTRODUCING IntelliWay</h1>
+    <p class="tagline-subtext">
+      <strong>IntelliWay combines AI, voice tech, and real-time data to create a smarter mobility <br>system one that works not just for cities, but for Bharat.</strong>
+    </p>
+  </section>
+
+  <!-- Introduction Highlight -->
+  <section class="intro-highlight" data-aos="fade-up">
+    <h2>Rethinking Mobility, the Indian Way</h2>
+    <p>
+      Gone are the days of static route maps and confusion. <br> With IntelliWay, discover a seamless commute that listens, learns, and leads <br>even in the toughest traffic, offline zones, or local language barriers.
+    </p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="features-heading" data-aos="fade-up">🚀 Key Capabilities</h2>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-right">
+          <div class="emoji">📡</div>
+          <h4>Live Intelligence</h4>
+          <p>Integrates real-time data from weather, traffic, and disaster systems for safe routing.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-left">
+          <div class="emoji">🧠</div>
+          <h4>ML-Personalized Journeys</h4>
+          <p>Understands user patterns to suggest better routes with fewer emissions and delays.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-right">
+          <div class="emoji">🎙️</div>
+          <h4>Voice + Visual UI</h4>
+          <p>Designed for low-literate and multilingual users with a voice-first interface.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-left">
+          <div class="emoji">♿</div>
+          <h4>Inclusive Design</h4>
+          <p>Wheelchair-friendly navigation and intuitive UX for all user types and needs.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-right">
+          <div class="emoji">📶</div>
+          <h4>Offline Support</h4>
+          <p>Routes and maps accessible even without internet — designed for remote areas.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-left">
+          <div class="emoji">🚇</div>
+          <h4>Sustainable Transit</h4>
+          <p>Combines metro, e-bikes, and buses to build greener commuting options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 IntelliWay Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: false,
+      duration: 1000,
+      easing: 'ease-in-out',
+    });
+  </script>
+</body>
+</html>

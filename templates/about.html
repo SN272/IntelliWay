@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About – IntelliWay</title>
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='assets/logo3.png') }}" alt="IntelliWay Logo" class="logo-img" />
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('route1') }}">Find Your Route</a></li>
+          <li><a href="#">Weather</a></li>
+          <li><a href="#">Updates</a></li>
+          <li><a href="#" class="btn">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="about-hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>About IntelliWay</h1>
+    </div>
+  </section>
+
+  <!-- About Info -->
+  <section class="about-section">
+    <div class="container">
+      <h2 data-aos="fade-right">🌟 What Is IntelliWay?</h2>
+      <p data-aos="fade-left">
+        IntelliWay is an AI-powered eco-mobility platform for real-time, multimodal, and inclusive route planning. 
+        It seamlessly integrates metros, e-bikes, buses, and walking with live weather, traffic, and disaster data.
+        Designed for all — including semi-urban users, low-literate individuals, and differently-abled commuters.
+      </p>
+
+      <h2 data-aos="fade-right">🚀 Why We Built It</h2>
+      <p data-aos="fade-left">
+        Mobility is evolving, but gaps still exist. IntelliWay bridges them using AI, ML, and a voice-first UI that adapts to real-world Indian constraints, even offline.
+      </p>
+
+      <h2 data-aos="fade-right">✨ Key Features</h2>
+      <ul class="feature-list">
+        <li data-aos="fade-up">🌱 Eco Routing – Suggests greenest routes</li>
+        <li data-aos="fade-up">📡 Live Data – Weather, traffic, and disaster-aware</li>
+        <li data-aos="fade-up">🧠 ML Personalization – Smarter, adaptive routing</li>
+        <li data-aos="fade-up">🎙️ Voice + Icon UI – Inclusive for all literacy levels</li>
+        <li data-aos="fade-up">♿ Inclusive Accessibility – Designed for diverse user abilities</li>
+        <li data-aos="fade-up">📶 Offline Support – Saved routes and map previews available without internet access</li>
+      </ul>
+
+      <h2 data-aos="fade-right">👥 Meet the Team</h2>
+      <div class="team-cards">
+        <div class="team-card" data-aos="fade-up">
+          <h3>👩‍💻 Nandini Sharma</h3>
+          <p>B.Tech CSE</p><p>Python, ML, UI/UX, Front-end</p>
+          <a href="https://github.com/SN272" target="_blank">GitHub ↗</a>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>👩‍💻 Aakriti</h3>
+          <p>B.Tech AIML</p><p></p>Frontend, AI Models, Accessibility-first design, Blockchain Basics</p>
+          <a href="https://github.com/Aakiiii04" target="_blank">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="team-cards2" data-aos="fade-right">
+          <h2 data-aos="fade-right">🤝 Want to partner, deploy, or collaborate?</h2>
+          <ul>
+          <li>Contact us at: intelliway.team@gmail.com</li>
+          <p><strong>Let’s Build a Smarter Bharat Together</strong></p>
+          </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 IntelliWay Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: false });
+  </script>
+</body>
+</html>

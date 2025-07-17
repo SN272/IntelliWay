@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Open Source Routing - IntelliWay</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='assets/logo3.png') }}" alt="IntelliWay Logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('route1') }}">Route</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h2 style="text-align: center;">🗺 Smart Route with OpenStreetMap</h2>
+
+  {% if coords %}
+  <div id="coord-data" data-coords='{{ coords | tojson | safe }}'></div>
+  {% endif %}
+
+  <div id="map"></div>
+
+  <script>
+    const coordDiv = document.getElementById("coord-data");
+    const coords = coordDiv ? JSON.parse(coordDiv.dataset.coords) : [];
+
+    const latlngs = coords.map(c => [c[1], c[0]]);  // [lat, lng]
+
+    const map = L.map('map').setView(latlngs[0] || [28.62, 77.22], 14);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    if (latlngs.length > 0) {
+      L.polyline(latlngs, { color: 'blue', weight: 5 }).addTo(map);
+      L.marker(latlngs[0]).addTo(map).bindPopup("Start").openPopup();
+      L.marker(latlngs[latlngs.length - 1]).addTo(map).bindPopup("End");
+    }
+  </script>
+
+</body>
+</html>
